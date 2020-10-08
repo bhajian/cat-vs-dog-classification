@@ -54,8 +54,8 @@ def train_input_fn(training_dir, hyperparameters):
     return _input(tf.estimator.ModeKeys.TRAIN, batch_size=BATCH_SIZE, data_dir=training_dir)
 
 
-def eval_input_fn(training_dir, hyperparameters):
-    return _input(tf.estimator.ModeKeys.EVAL, batch_size=BATCH_SIZE, data_dir=training_dir)
+def eval_input_fn(val_dir, hyperparameters):
+    return _input(tf.estimator.ModeKeys.EVAL, batch_size=BATCH_SIZE, data_dir=val_dir)
 
 
 def _input(mode, batch_size, data_dir):
